@@ -1,0 +1,24 @@
+{%extends "AppCafe/padre.html"%}
+
+{%load static%}
+
+{%block contenidoQueCambia%}
+    <center>
+        <h1><b>Los resultados de la busqueda son los siguientes</b></h1>
+        {% if cuenta and mesero and cliente %}
+            <ul>
+                {% for c in cuenta %}
+                    <p>La cuenta de la mesa {{c.mesa}} es {{c.total}}</p>
+                {% endfor %}
+                {% for m in mesero %}
+                    <p>El mesero que atendio fue {{m.nombre}}</p>
+                {% endfor %}
+                {% for c in cliente %}
+                    <p>Los datos del cliente de la mesa {{c.mesa}} son: {{m.nombre}}</p>
+                    <li>Nombre: {{c.nombre}}</li>
+                    <li>Email: {{c.email}}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </center>
+{%endblock%}

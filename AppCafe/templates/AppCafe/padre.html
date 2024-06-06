@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {%load static%}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Cafe Moshi</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'AppCafe/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'Inicio' %}">Cafe Moshi</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'Inicio' %}">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Cliente' %}">Cliente</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Mesero' %}">Mesero</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Cuenta' %}">Cuenta</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'BusquedaMesa' %}">Buscar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header - set the background image for the header in the line below-->
+        <header class="py-5 bg-image-full" style="background-image: url('https://img.freepik.com/vector-gratis/fondo-cafeteria-dibujado-mano_23-2150849907.jpg?w=996&t=st=1717610302~exp=1717610902~hmac=86e563578f45c3d743662f65c7ff8518cfd0c441bceee2a2e056d64a91c801c3')">
+            <div class="text-center my-5">
+                <h1 class="text-white fs-3 fw-bolder">Cafe Moshi</h1>
+                <p style="color: azure;"><b>Una sonrisa en cada sorbo</b></p>
+            </div>
+        </header>
+        <!-- Contenido que cambia-->
+        {% block contenidoQueCambia %}
+        <section class="py-5">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2>Este es el contenido que va a cambiar</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endblock %}
+        <!-- Image element - set the background image for the header in the line below-->
+        <div class="py-5 bg-image-full" style="background-image: url('https://img.freepik.com/foto-gratis/superficie-madera-mirando-mensa_23-2147701343.jpg?w=826&t=st=1717610229~exp=1717610829~hmac=68492085244bc7202e8aaded26f80f2238565829f8a1d7aaaaf3b2ea45926d8a')">
+            <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+            <div style="height: 20rem"></div>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Cafe Moshi 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+    </body>
+</html>
